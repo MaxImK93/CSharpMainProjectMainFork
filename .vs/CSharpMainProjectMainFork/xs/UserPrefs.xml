@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{7B826C27-ECBC-F079-E7EC-03B1A5B23888}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UnitBrains/BaseUnitBrain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs">
     <Files>
-      <File FileName="Assets/Scripts/Model/Runtime/ReadOnly/IReadOnlyUnit.cs" />
+      <File FileName="Assets/Scripts/Model/Runtime/ReadOnly/IReadOnlyUnit.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UnitBrains/BaseUnitBrain.cs" Line="102" Column="39" />
-      <File FileName="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs" />
-      <File FileName="Assets/Scripts/UnitBrains/UnitBrainProvider.cs" Line="8" Column="21" />
-      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" Line="35" Column="49" />
-      <File FileName="Assets/Scripts/Controller/LevelController.cs" Line="83" Column="59" />
-      <File FileName="Assets/Scripts/UnitBrains/UnitsCoordinator.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/UnitBrains/UnitBrainProvider.cs" />
+      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" />
+      <File FileName="Assets/Scripts/Controller/LevelController.cs" />
+      <File FileName="Assets/Scripts/UnitBrains/UnitsCoordinator.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,10 +17,14 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Controller" expanded="True" />
                 <Node name="Model" expanded="True">
-                  <Node name="Runtime" expanded="True" />
+                  <Node name="Runtime" expanded="True">
+                    <Node name="ReadOnly" expanded="True">
+                      <Node name="IReadOnlyUnit.cs" selected="True" />
+                    </Node>
+                  </Node>
                 </Node>
                 <Node name="UnitBrains" expanded="True">
-                  <Node name="BaseUnitBrain.cs" selected="True" />
+                  <Node name="Player" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -31,7 +35,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="585d8901-260c-47d2-83b2-db113e0804a3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a501dc0d-6915-454a-b476-e2bfb82d89b8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

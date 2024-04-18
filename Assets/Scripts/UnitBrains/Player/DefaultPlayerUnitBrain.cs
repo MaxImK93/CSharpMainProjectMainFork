@@ -26,7 +26,7 @@ namespace UnitBrains.Player
         {
 
             // Предполагается, что UnitsCoordinator уже инициализирован и настроен
-            UnitsCoordinator unitsCoordinator = UnitsCoordinator.GetInstance();
+            UnitsCoordinator unitsCoordinator = new UnitsCoordinator(); 
 
             // Получаем рекомендуемую позицию цели от координатора
             Vector2Int recommendedTargetPosition = unitsCoordinator.FindTargetEnemy();
