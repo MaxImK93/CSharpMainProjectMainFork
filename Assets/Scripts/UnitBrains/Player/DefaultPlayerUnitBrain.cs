@@ -22,17 +22,7 @@ namespace UnitBrains.Player
             return distanceA.CompareTo(distanceB);
         }
 
-        public override Vector2Int GetNextStep()
-        {
 
-            // Предполагается, что UnitsCoordinator уже инициализирован и настроен
-            UnitsCoordinator unitsCoordinator = new UnitsCoordinator(); 
-
-            // Получаем рекомендуемую позицию цели от координатора
-            Vector2Int recommendedTargetPosition = unitsCoordinator.FindTargetEnemy();
-
-            return recommendedTargetPosition;
-        }
 
 
     }

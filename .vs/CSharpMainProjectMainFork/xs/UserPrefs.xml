@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{7B826C27-ECBC-F079-E7EC-03B1A5B23888}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Config/UnitConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UnitBrains/Player/DublUnitBrain.cs">
     <Files>
-      <File FileName="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs" Line="15" Column="51" />
-      <File FileName="Assets/Scripts/Controller/RootController.cs" />
-      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" Line="15" Column="22" />
-      <File FileName="Buff.cs" Line="5" Column="58" />
-      <File FileName="BuffSystem.cs" Line="33" Column="31" />
-      <File FileName="Assets/Scripts/Model/Config/UnitConfig.cs" Line="14" Column="45" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/UnitBrains/BaseUnitBrain.cs" Line="151" Column="1" />
+      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" Line="41" Column="82" />
+      <File FileName="Assets/Scripts/Utilities/ServiceLocator.cs" Line="32" Column="1" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/SecondUnitBrain.cs" Line="38" Column="51" />
+      <File FileName="Assets/Scripts/Model/IReadOnlyRuntimeModel.cs" Line="17" Column="16" />
+      <File FileName="Assets/Scripts/Controller/Buff.cs" Line="15" Column="43" />
+      <File FileName="Assets/Scripts/Controller/BuffSystem.cs" Line="66" Column="22" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/DublUnitBrain.cs" Line="43" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,15 +19,17 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Controller" expanded="True" />
                 <Node name="Model" expanded="True">
-                  <Node name="Config" expanded="True">
-                    <Node name="UnitConfig.cs" selected="True" />
+                  <Node name="Runtime" expanded="True">
+                    <Node name="ReadOnly" expanded="True" />
                   </Node>
-                  <Node name="Runtime" expanded="True" />
                 </Node>
                 <Node name="UnitBrains" expanded="True">
-                  <Node name="Player" expanded="True" />
+                  <Node name="Player" expanded="True">
+                    <Node name="DublUnitBrain.cs" selected="True" />
+                  </Node>
                 </Node>
                 <Node name="Utilities" expanded="True" />
+                <Node name="View" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -34,7 +39,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e1971fa0-217d-4915-b198-2b2d9ec9380e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5f74998c-63eb-4e56-9d20-3072fa75c93c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
