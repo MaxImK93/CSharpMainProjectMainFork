@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AssemblyCSharp.Assets.Scripts;
+using AssemblyCSharp.Assets.Scripts.Controller;
 using Model.Config;
 using Model.Runtime.Projectiles;
 using Model.Runtime.ReadOnly;
@@ -28,7 +30,9 @@ namespace Model.Runtime
         private float _nextMoveTime = 0f;
         private float _nextAttackTime = 0f;
 
-        private BuffSystem _buffSystem;
+        MoveSpeedBuff speedBuff = new MoveSpeedBuff(1.2f);
+        AttackSpeedBuff attackSpeed = new AttackSpeedBuff(1.2f);
+
 
         public Unit(UnitConfig config, Vector2Int startPos, UnitsCoordinator unitsCoordinator)
         {
@@ -39,11 +43,11 @@ namespace Model.Runtime
             _brain = UnitBrainProvider.GetBrain(config);
             _brain.SetUnit(this);
             _runtimeModel = ServiceLocator.Get<IReadOnlyRuntimeModel>(); //получаем RuntimeModel через ServiceLocator
-            _buffSystem = ServiceLocator.Get<BuffSystem>();
         }
 
         public void Update(float deltaTime, float time)
         {
+
             if (IsDead)
                 return;
             
@@ -55,13 +59,13 @@ namespace Model.Runtime
             
             if (_nextMoveTime < time)
             {
-                _nextMoveTime = time + Config.MoveDelay * _buffSystem.GetMoveSpeedModifier(this);
+                AddBuff(speedBuff);
                 Move();
             }
             
             if (_nextAttackTime < time && Attack())
             {
-                _nextAttackTime = time + Config.AttackDelay * _buffSystem.GetAttackSpeedModifier(this);
+                AddBuff(attackSpeed);
             }
         }
 
@@ -103,5 +107,27 @@ namespace Model.Runtime
         {
             Health -= projectileDamage;
         }
+
+        public void UpdateNextMoveTime(float moveSpeedMultiplier)
+        {
+          
+            _nextMoveTime = Time.time + Config.MoveDelay * moveSpeedMultiplier;
+        }
+
+        public void UpdateNextAttackTime(float attackSpeedMultiplier)
+        {
+
+            _nextAttackTime = Time.time + Config.MoveDelay * attackSpeedMultiplier;
+        }
+
+        public void AddBuff(IBuff<Unit> buff)
+        {
+            if (buff.CanApply(this))
+            {
+                buff.Apply(this);
+            }
+        }
+
+        
     }
 }

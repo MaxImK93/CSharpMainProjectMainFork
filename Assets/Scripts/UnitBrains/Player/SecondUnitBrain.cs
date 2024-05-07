@@ -8,20 +8,28 @@ namespace UnitBrains.Player
     {
         public override string TargetUnitName => "Cobra Commando"; //задаем имя unit brain 
         private const float OverheatTemperature = 3f;
+        public float GetOverheatTemperature()
+        {
+            return OverheatTemperature;
+        }
         private const float OverheatCooldown = 2f;
         private float _temperature = 0f;
         private float _cooldownTime = 0f;
         private bool _overheated;
-        
+        public bool IsDoubleShotActive { get; set; }
+
         protected override void GenerateProjectiles(Vector2Int forTarget, List<BaseProjectile> intoList)
         {
             float overheatTemperature = OverheatTemperature;
-            ///////////////////////////////////////
-            // Homework 1.3 (1st block, 3rd module)
-            ///////////////////////////////////////           
             var projectile = CreateProjectile(forTarget);
             AddProjectileToList(projectile, intoList);
-            ///////////////////////////////////////
+
+            if (IsDoubleShotActive)
+            {
+                var secondProjectile = CreateProjectile(forTarget);
+                AddProjectileToList(secondProjectile, intoList);
+            }
+
         }
 
         public override Vector2Int GetNextStep()
@@ -82,6 +90,16 @@ namespace UnitBrains.Player
         {
             _temperature += 1f;
             if (_temperature >= OverheatTemperature) _overheated = true;
+        }
+
+        public void ActivateDoubleShot()
+        {
+            IsDoubleShotActive = true;
+        }
+
+        public void DeactivateDoubleShot()
+        {
+            IsDoubleShotActive = false;
         }
     }
 }

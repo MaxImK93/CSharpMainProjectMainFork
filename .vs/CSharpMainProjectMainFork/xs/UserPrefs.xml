@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{7B826C27-ECBC-F079-E7EC-03B1A5B23888}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UnitBrains/Player/DublUnitBrain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DoubleShotBuff.cs">
     <Files>
-      <File FileName="Assets/Scripts/UnitBrains/Player/DefaultPlayerUnitBrain.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/UnitBrains/BaseUnitBrain.cs" Line="151" Column="1" />
-      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" Line="41" Column="82" />
-      <File FileName="Assets/Scripts/Utilities/ServiceLocator.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/UnitBrains/Player/SecondUnitBrain.cs" Line="38" Column="51" />
-      <File FileName="Assets/Scripts/Model/IReadOnlyRuntimeModel.cs" Line="17" Column="16" />
-      <File FileName="Assets/Scripts/Controller/Buff.cs" Line="15" Column="43" />
-      <File FileName="Assets/Scripts/Controller/BuffSystem.cs" Line="66" Column="22" />
-      <File FileName="Assets/Scripts/UnitBrains/Player/DublUnitBrain.cs" Line="43" Column="56" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/DublUnitBrain.cs" Line="20" Column="49" />
+      <File FileName="Assets/Scripts/AttackSpeedBuff.cs" Line="18" Column="36" />
+      <File FileName="Assets/Scripts/Controller/IBuff.cs" Line="9" Column="2" />
+      <File FileName="Assets/Scripts/AbsBuff.cs" Line="9" Column="35" />
+      <File FileName="Assets/Scripts/Controller/MoveSpeedBuff.cs" Line="11" Column="10" />
+      <File FileName="Assets/Scripts/Model/Runtime/Unit.cs" Line="62" Column="36" />
+      <File FileName="Assets/Scripts/UnitBrains/Player/SecondUnitBrain.cs" Line="95" Column="36" />
+      <File FileName="Assets/Scripts/DoubleShotBuff.cs" Line="28" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,12 +23,11 @@
                   </Node>
                 </Node>
                 <Node name="UnitBrains" expanded="True">
-                  <Node name="Player" expanded="True">
-                    <Node name="DublUnitBrain.cs" selected="True" />
-                  </Node>
+                  <Node name="Player" expanded="True" />
                 </Node>
                 <Node name="Utilities" expanded="True" />
                 <Node name="View" expanded="True" />
+                <Node name="DoubleShotBuff.cs" selected="True" />
               </Node>
             </Node>
           </Node>
