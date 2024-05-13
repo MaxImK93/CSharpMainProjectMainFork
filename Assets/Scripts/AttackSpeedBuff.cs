@@ -1,9 +1,10 @@
 ﻿using System;
+using AssemblyCSharp.Assets.Scripts.Controller;
 using Model.Runtime;
 
 namespace AssemblyCSharp.Assets.Scripts
 {
-    public class AttackSpeedBuff : AbsBuff<Unit> 
+    public class AttackSpeedBuff : IBuff<Unit>
     {
         private float _newAttackSpeed;
 
@@ -12,13 +13,13 @@ namespace AssemblyCSharp.Assets.Scripts
             _newAttackSpeed = multiplier;
         }
 
-        public override bool CanApply(Unit unit)
+        public bool CanApply(Unit unit)
         {
 
             return unit.Health > 0;
         }
 
-        public override void Apply(Unit unit)
+        public void Apply(Unit unit)
         {
 
             unit.UpdateNextAttackTime(_newAttackSpeed);
